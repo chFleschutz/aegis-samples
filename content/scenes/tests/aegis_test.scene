@@ -10,6 +10,7 @@
     "PointLight": 1,
     "SceneInstance": 1,
     "Sky": 1,
+    "SpotLight": 1,
     "Transform": 1
   },
   "entities": [
@@ -41,6 +42,25 @@
         "Transform": {
           "location": [0, 0, 0],
           "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "5b0c3e9a71d4f826",
+      "name": "Spot Light",
+      "children": [],
+      "components": {
+        "SpotLight": {
+          "color": [0.2, 0.5, 1],
+          "intensity": 250,
+          "range": 6,
+          "innerConeAngle": 0.2094395,
+          "outerConeAngle": 0.3141593
+        },
+        "Transform": {
+          "location": [-0.8, -1.5, 1.2],
+          "rotation": [-0.3226223, 0, -0.1344259, 0.9369336],
           "scale": [1, 1, 1]
         }
       }
