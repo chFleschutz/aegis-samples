@@ -56,7 +56,8 @@
           "intensity": 250,
           "range": 6,
           "innerConeAngle": 0.2094395,
-          "outerConeAngle": 0.3141593
+          "outerConeAngle": 0.3141593,
+          "castsShadows": true
         },
         "Transform": {
           "location": [-0.8, -1.5, 1.2],
