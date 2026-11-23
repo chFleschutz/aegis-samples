@@ -1,0 +1,12 @@
+{
+  "id": "4c67560000a1ae00",
+  "importer": "audio",
+  "importerVersion": 1,
+  "settings": {
+    "upAxis": "Y",
+    "handedness": "Right",
+    "scale": 1,
+    "strictNames": false
+  },
+  "subAssets": {}
+}
