@@ -1,0 +1,137 @@
+{
+  "type": "Scene",
+  "id": "c63d14e819a5fdd0",
+  "version": 1,
+  "types": {
+    "AmbientLight": 1,
+    "AudioSource": 1,
+    "Camera": 1,
+    "DirectionalLight": 1,
+    "DynamicTag": 1,
+    "KinematicMovementController": 1,
+    "MainCamera": 1,
+    "MeshRenderer": 1,
+    "Sky": 1,
+    "Transform": 1
+  },
+  "entities": [
+    {
+      "id": "1b2778588772920d",
+      "name": "Floor",
+      "children": [],
+      "components": {
+        "MeshRenderer": {
+          "mesh": "b78e76b4e631a8af",
+          "material": "ef0a1829628bfca0"
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [2, 2, 2]
+        }
+      }
+    },
+    {
+      "id": "3d93afedaf7319cd",
+      "name": "Speaker",
+      "children": [],
+      "components": {
+        "AudioSource": {
+          "clip": "ef02d3e6e83754b3",
+          "volume": 1,
+          "pitch": 1,
+          "loop": true,
+          "playOnBegin": true,
+          "spatial": true,
+          "minDistance": 2,
+          "maxDistance": 50
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aaf8f137063fc103"
+        },
+        "Transform": {
+          "location": [4, 0, 1],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.5, 0.5, 0.5]
+        }
+      }
+    },
+    {
+      "id": "58da82b7776ebd1e",
+      "name": "Main Camera",
+      "children": [],
+      "components": {
+        "Camera": {
+          "fov": 1.0471976,
+          "near": 0.1,
+          "far": 1000
+        },
+        "DynamicTag": {},
+        "MainCamera": {},
+        "Transform": {
+          "location": [0, -10, 4],
+          "rotation": [-0.13052619, 0, 0, 0.9914449],
+          "scale": [1, 1, 1]
+        }
+      },
+      "scripts": [
+        {
+          "KinematicMovementController": {
+            "moveSpeed": 5,
+            "lookSpeed": 1.5,
+            "mouseSensitivity": 0.004,
+            "mousePanSpeed": 0.02
+          }
+        }
+      ]
+    },
+    {
+      "id": "64947087eccd7af0",
+      "name": "Skybox",
+      "children": [],
+      "components": {
+        "Sky": {
+          "environment": null
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "65499ced7d695884",
+      "name": "Ambient Light",
+      "children": [],
+      "components": {
+        "AmbientLight": {
+          "color": [1, 1, 1],
+          "intensity": 0.1
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "6ad25750b44c18eb",
+      "name": "Directional Light",
+      "children": [],
+      "components": {
+        "DirectionalLight": {
+          "color": [1, 1, 1],
+          "intensity": 1
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0.46193975, 0.19134173, 0.3314136, 0.8001031],
+          "scale": [1, 1, 1]
+        }
+      }
+    }
+  ]
+}
