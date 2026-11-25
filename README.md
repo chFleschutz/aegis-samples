@@ -14,6 +14,8 @@ reference assets by ID. `.aegis/` holds the local cache and is never committed.
 - `content/materials/` - material files, their textures in `textures/`
 - `content/environments/` - HDR skies
 - `content/scenes/` - the examples' scenes; stress scenes in `stress/`, `aegis-test`'s in `tests/`
+- `content/prefabs/` - scenes that scripts spawn
+- `project.aegis` - the project file: the input map the gameplay scene's scripts read
 - `screenshots/` - the models' screenshots, linked from their READMEs
 
 ## Credits

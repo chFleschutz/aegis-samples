@@ -1,0 +1,446 @@
+{
+  "type": "Scene",
+  "id": "a7d24e19c6b3f805",
+  "version": 1,
+  "types": {
+    "ActionSpawner": 1,
+    "AmbientLight": 1,
+    "AudioSource": 1,
+    "Camera": 1,
+    "CharacterController": 1,
+    "CharacterInput": 1,
+    "Collider": 1,
+    "ContactSound": 1,
+    "DirectionalLight": 1,
+    "DynamicTag": 1,
+    "MainCamera": 1,
+    "MeshRenderer": 1,
+    "Oscillator": 1,
+    "RigidBody": 1,
+    "Sky": 1,
+    "Transform": 1
+  },
+  "entities": [
+    {
+      "id": "3f0c6a18e2d94b71",
+      "name": "Main Camera",
+      "children": [],
+      "components": {
+        "Camera": {
+          "fov": 1.0471976,
+          "near": 0.1,
+          "far": 1000
+        },
+        "MainCamera": {},
+        "Transform": {
+          "location": [0, -18, 9],
+          "rotation": [-0.22975292, 0, 0, 0.97324899],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "4b81e5d02c7a9f36",
+      "name": "Floor",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aa59a60926ef9ae9"
+        },
+        "Transform": {
+          "location": [0, 0, -0.5],
+          "rotation": [0, 0, 0, 1],
+          "scale": [10, 10, 0.5]
+        }
+      }
+    },
+    {
+      "id": "5d27c9a4f1e083b6",
+      "name": "Directional Light",
+      "children": [],
+      "components": {
+        "DirectionalLight": {
+          "color": [1, 1, 1],
+          "intensity": 1
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [-0.19134173, 0.46193975, 0.8001031, -0.3314136],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "6e93b2f7a5d14c08",
+      "name": "Ambient Light",
+      "children": [],
+      "components": {
+        "AmbientLight": {
+          "color": [1, 1, 1],
+          "intensity": 0.3
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "7a1d48c3e6f2b905",
+      "name": "Skybox",
+      "children": [],
+      "components": {
+        "Sky": {
+          "environment": null
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      }
+    },
+    {
+      "id": "82c5f0e9b4a7d613",
+      "name": "Character",
+      "children": ["83d6a1fa05b8e724"],
+      "components": {
+        "AudioSource": {
+          "clip": "4c67560000a1ae00",
+          "volume": 1,
+          "pitch": 1,
+          "loop": false,
+          "playOnBegin": false,
+          "spatial": true,
+          "minDistance": 2,
+          "maxDistance": 50
+        },
+        "CharacterController": {
+          "radius": 0.3,
+          "height": 1.8,
+          "maxSlope": 50,
+          "stepHeight": 0.3,
+          "pushStrength": 100
+        },
+        "DynamicTag": {},
+        "Transform": {
+          "location": [0, -6, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      },
+      "scripts": [
+        {
+          "CharacterInput": {
+            "speed": 4,
+            "jumpSpeed": 5
+          }
+        },
+        {
+          "ContactSound": {}
+        }
+      ]
+    },
+    {
+      "id": "83d6a1fa05b8e724",
+      "name": "Character Body",
+      "children": [],
+      "components": {
+        "DynamicTag": {},
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "9ad18c73d472ee5f"
+        },
+        "Transform": {
+          "location": [0, 0, 0.9],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.3, 0.3, 0.9]
+        }
+      }
+    },
+    {
+      "id": "90d3c4b5a6f7e812",
+      "name": "Wall",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "5cf610380bba503e"
+        },
+        "Transform": {
+          "location": [0, 6.5, 1],
+          "rotation": [0, 0, 0, 1],
+          "scale": [4, 0.5, 1]
+        }
+      }
+    },
+    {
+      "id": "94e7b20c16f3a8d5",
+      "name": "Platform",
+      "children": ["95f8c31d27a4b9e6", "96a9d42e38b5caf7"],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1.5, 1.5, 0.25],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "DynamicTag": {},
+        "RigidBody": {
+          "motionType": "Kinematic",
+          "mass": 1,
+          "friction": 0.5,
+          "restitution": 0,
+          "linearDamping": 0.05,
+          "angularDamping": 0.05,
+          "gravityFactor": 1
+        },
+        "Transform": {
+          "location": [5, 0, 0.25],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      },
+      "scripts": [
+        {
+          "Oscillator": {
+            "offset": [0, 3, 0],
+            "period": 4
+          }
+        }
+      ]
+    },
+    {
+      "id": "95f8c31d27a4b9e6",
+      "name": "Platform Deck",
+      "children": [],
+      "components": {
+        "DynamicTag": {},
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "75beeae89401f524"
+        },
+        "Transform": {
+          "location": [0, 0, 0],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1.5, 1.5, 0.25]
+        }
+      }
+    },
+    {
+      "id": "96a9d42e38b5caf7",
+      "name": "Platform Marker",
+      "children": [],
+      "components": {
+        "DynamicTag": {},
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "0fe7fe59044875c6"
+        },
+        "Transform": {
+          "location": [0.5, -0.5, 0.75],
+          "rotation": [0, 0, 0.38268343, 0.92387953],
+          "scale": [0.25, 0.25, 0.5]
+        }
+      }
+    },
+    {
+      "id": "a5b0e53f49c6db08",
+      "name": "Crate Spawner",
+      "children": [],
+      "components": {
+        "Transform": {
+          "location": [-5, 0, 3],
+          "rotation": [0, 0, 0, 1],
+          "scale": [1, 1, 1]
+        }
+      },
+      "scripts": [
+        {
+          "ActionSpawner": {
+            "prefab": "5e3a9c17d2b84f60",
+            "action": "Spawn",
+            "offset": [0, 0, 0]
+          }
+        }
+      ]
+    },
+    {
+      "id": "b1c6f7408a5d2e19",
+      "name": "Box 1",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aaf8f137063fc103"
+        },
+        "RigidBody": {
+          "motionType": "Dynamic",
+          "mass": 1,
+          "friction": 0.5,
+          "restitution": 0,
+          "linearDamping": 0.05,
+          "angularDamping": 0.05,
+          "gravityFactor": 1
+        },
+        "Transform": {
+          "location": [0.0, -3.0, 0.5],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.5, 0.5, 0.5]
+        }
+      }
+    },
+    {
+      "id": "b2d7a8519b6e3f2a",
+      "name": "Box 2",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aaf8f137063fc103"
+        },
+        "RigidBody": {
+          "motionType": "Dynamic",
+          "mass": 1,
+          "friction": 0.5,
+          "restitution": 0,
+          "linearDamping": 0.05,
+          "angularDamping": 0.05,
+          "gravityFactor": 1
+        },
+        "Transform": {
+          "location": [0.6, -1.0, 0.5],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.5, 0.5, 0.5]
+        }
+      }
+    },
+    {
+      "id": "b3e8b962ac7f403b",
+      "name": "Box 3",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aaf8f137063fc103"
+        },
+        "RigidBody": {
+          "motionType": "Dynamic",
+          "mass": 1,
+          "friction": 0.5,
+          "restitution": 0,
+          "linearDamping": 0.05,
+          "angularDamping": 0.05,
+          "gravityFactor": 1
+        },
+        "Transform": {
+          "location": [-0.6, 1.0, 0.5],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.5, 0.5, 0.5]
+        }
+      }
+    },
+    {
+      "id": "b4f9ca73bd80514c",
+      "name": "Box 4",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aaf8f137063fc103"
+        },
+        "RigidBody": {
+          "motionType": "Dynamic",
+          "mass": 1,
+          "friction": 0.5,
+          "restitution": 0,
+          "linearDamping": 0.05,
+          "angularDamping": 0.05,
+          "gravityFactor": 1
+        },
+        "Transform": {
+          "location": [0.3, 3.0, 0.5],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.5, 0.5, 0.5]
+        }
+      }
+    },
+    {
+      "id": "b50adb84ce91625d",
+      "name": "Box 5",
+      "children": [],
+      "components": {
+        "Collider": {
+          "shape": "Box",
+          "halfExtents": [1, 1, 1],
+          "radius": 0.5,
+          "halfHeight": 0.5,
+          "offset": [0, 0, 0]
+        },
+        "MeshRenderer": {
+          "mesh": "1f57e55da564f514",
+          "material": "aaf8f137063fc103"
+        },
+        "RigidBody": {
+          "motionType": "Dynamic",
+          "mass": 1,
+          "friction": 0.5,
+          "restitution": 0,
+          "linearDamping": 0.05,
+          "angularDamping": 0.05,
+          "gravityFactor": 1
+        },
+        "Transform": {
+          "location": [-0.3, 4.5, 0.5],
+          "rotation": [0, 0, 0, 1],
+          "scale": [0.5, 0.5, 0.5]
+        }
+      }
+    }
+  ]
+}

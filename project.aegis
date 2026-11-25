@@ -1,0 +1,24 @@
+// The Examples project's settings (aegis.project_file): the input map the gameplay scene's scripts read.
+{
+  "input": {
+    "actions": {
+      "Jump": ["Space", "GamepadA"],
+      "Spawn": ["E", "GamepadX"]
+    },
+    "axes": {
+      "MoveX": [
+        { "negative": "A", "positive": "D" },
+        { "negative": "Left", "positive": "Right" },
+        { "negative": "GamepadDpadLeft", "positive": "GamepadDpadRight" },
+        { "axis": "GamepadLeftX" }
+      ],
+      // The stick's y is down-positive and a binding can't invert it, so forward is on the d-pad only
+      "MoveY": [
+        { "negative": "S", "positive": "W" },
+        { "negative": "Down", "positive": "Up" },
+        { "negative": "GamepadDpadDown", "positive": "GamepadDpadUp" }
+      ]
+    },
+    "deadZone": 0.15
+  }
+}
